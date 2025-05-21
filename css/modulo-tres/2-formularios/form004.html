@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        legend {
+            background-color: rgb(212, 212, 212);
+            border: 1px solid #000;
+            font: normal 1em arial, sans-serif;
+            padding: 2px;
+        }
+
+        fieldset {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário </h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="name" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+                <p>
+                    <label for="itelefone">Telefone:</label>
+                    <input type="tel" name="Telefone" id="itelefone" required placeholder="(xx) xxxxx-xxxx" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+                </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+        <!-- ESTUDAR REGEX-->
+    </form>
+</body>
+</html>
